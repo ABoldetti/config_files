@@ -1,0 +1,124 @@
+{
+    "workbench.sideBar.location": "right",
+    "terminal.integrated.env.linux": {
+        "STARSHIP_CONFIG":"/home/nobolde/.config/pure-preset.toml",
+        "SPACESHIP_PROMPT_ADD_NEWLINE":"false"
+    },
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ],
+            "env": {}
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "pdfLaTeX",
+            "tools": [
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "latexmk 🔃",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ]
+        },
+        {
+            "name": "pdflatex ➞ bibtex ➞ pdflatex`×2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "xelatex ➞ bibtex ➞ xelatex`×2",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.autoClean.run": "onSucceeded",
+    "latex-workshop.latex.clean.args": [
+        "-outdir=%TEX%/auxiliary",
+        "-c",
+        "%TEX%"
+    ],
+    "editor.wordWrap": "on",
+    "git.confirmSync": false,
+    "editor.minimap.enabled": false,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "python": false,
+        "latex": false,
+        "cpp": false
+    },
+    "[cpp]": {
+        "editor.wordBasedSuggestions": "off",
+        "editor.semanticHighlighting.enabled": true,
+        "editor.stickyScroll.defaultModel": "foldingProviderModel",
+        "editor.suggest.insertMode": "replace"
+    },
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "explorer.confirmDelete": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.fontFamily": "'FiraCode Nerd Font Mono'",
+    "files.associations": {
+        "*.py": "python"
+    },
+    "jupyter.askForKernelRestart": false,
+    "git.autofetch": true,
+    "chat.mcp.gallery.enabled": true
+}
