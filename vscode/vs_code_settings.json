@@ -1,8 +1,29 @@
 {
-    "workbench.sideBar.location": "right",
     "terminal.integrated.env.linux": {
         "STARSHIP_CONFIG":"/home/nobolde/.config/pure-preset.toml",
         "SPACESHIP_PROMPT_ADD_NEWLINE":"false"
+        
+    },
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "bash",
+            "args": ["--rcfile", "~/.vscode_bashrc"],
+            "icon": "terminal-bash"
+        },
+        "zsh": {
+            "path": "zsh"
+        },
+        "fish": {
+            "path": "fish"
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        }
     },
     "latex-workshop.latex.tools": [
         {
@@ -95,7 +116,6 @@
     ],
     "editor.wordWrap": "on",
     "git.confirmSync": false,
-    "editor.minimap.enabled": false,
     "github.copilot.enable": {
         "*": false,
         "plaintext": false,
@@ -103,7 +123,8 @@
         "scminput": false,
         "python": false,
         "latex": false,
-        "cpp": false
+        "cpp": false,
+        "shellscript": false
     },
     "[cpp]": {
         "editor.wordBasedSuggestions": "off",
@@ -120,5 +141,40 @@
     },
     "jupyter.askForKernelRestart": false,
     "git.autofetch": true,
-    "chat.mcp.gallery.enabled": true
+    "chat.mcp.gallery.enabled": true,
+    "workbench.commandPalette.experimental.enableNaturalLanguageSearch": false,
+    "github.copilot.chat.useResponsesApi": false,
+    "extensions.ignoreRecommendations": true,
+    "terminal.integrated.suggest.enabled": false,
+    "explorer.confirmDragAndDrop": false,
+    "editor.minimap.enabled": false,
+    "[python]": {
+        "diffEditor.ignoreTrimWhitespace": true
+    },
+    "latex-workshop.view.pdf.color.light.backgroundColor": "",
+    "latex-workshop.view.pdf.invert": 1,
+    "python.createEnvironment.trigger": "off",
+    "python.analysis.typeCheckingMode": "basic",
+    "git.openRepositoryInParentFolders": "never",
+    "terminal.integrated.shellIntegration.enabled": false,
+    "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+    "workbench.sideBar.location": "right",
+    "chat.viewSessions.orientation": "stacked",
+    "explorer.confirmPasteNative": false,
+    "python.analysis.diagnosticSeverityOverrides": {},
+    "python.analysis.autoIndent": false,
+    "python.analysis.displayEnglishDiagnostics": true,
+    // "workbench.colorTheme": "Quiet Light", 
+    // "workbench.colorCustomizations": {
+    //     "[Quiet Light]": {
+    //         "editor.background":"#f5eef3",
+    //         "sideBar.background":"#f5eef3",
+    //         "editorGroupHeader.tabsBackground":"#f3f3f3",
+    //     }
+    // },
+    "settingsSync.ignoredSettings": [
+        "workbench.colorTheme",
+        "workbench.colorCustomizations"
+    ],
+    "workbench.colorTheme": "Ayu Dark Bordered",
 }

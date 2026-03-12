@@ -1,0 +1,46 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+if [ -d ~/.bashrc.d ]; then
+    for rc in ~/.bashrc.d/*; do
+        if [ -f "$rc" ]; then
+            . "$rc"
+        fi
+    done
+fi
+unset rc
+
+# Bold text
+BOLD="\[\e[1m\]"
+RESET="\[\e[0m\]"
+
+# Custom PS1 with date and time
+PS1="${BOLD}[\u \D{%Y-%m-%d %H:%M}]${RESET} \w \$ "
+
+export PS1
+
+source /home/nobolde/.build/root/bin/thisroot.sh
+source /home/nobolde/.build/geant/install/bin/geant4.sh
+
+
+alias la="ls -a -h --color=always"
+alias ll="ls -l -h --color=always"
+alias activate="source ~/coding/.venvs/pyvenv/bin/activate"
+alias sleep="systemctl suspend"
+alias sd="shutdown -h now"
+
+fastfetch
