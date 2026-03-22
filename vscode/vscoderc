@@ -29,7 +29,7 @@ BOLD="\[\e[1m\]"
 RESET="\[\e[0m\]"
 
 # Custom PS1 with date and time
-PS1="${BOLD}[\u \D{%Y-%m-%d %H:%M}]${RESET} \w \$ "
+PS1=""
 
 export PS1
 
@@ -39,8 +39,3 @@ source /home/nobolde/.build/geant/install/bin/geant4.sh
 
 alias la="ls -a -h --color=always"
 alias ll="ls -l -h --color=always"
-alias activate="source ~/coding/.venvs/pyvenv/bin/activate"
-alias sleep="systemctl suspend"
-alias sd="shutdown -h now"
-
-fastfetch
