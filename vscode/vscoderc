@@ -39,3 +39,4 @@ source /home/nobolde/.build/geant/install/bin/geant4.sh
 
 alias la="ls -a -h --color=always"
 alias ll="ls -l -h --color=always"
+alias activate="source ~/coding/.venvs/pyvenv/bin/activate"
