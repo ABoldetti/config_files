@@ -1,180 +1,107 @@
 {
+    // -----------------------------------------
+    //              Terminal
+    // -----------------------------------------
     "terminal.integrated.env.linux": {
-        "STARSHIP_CONFIG":"/home/nobolde/.config/pure-preset.toml",
-        "SPACESHIP_PROMPT_ADD_NEWLINE":"false"
-        
+        "STARSHIP_CONFIG": "/home/nobolde/.config/pure-preset.toml",
+        "SPACESHIP_PROMPT_ADD_NEWLINE": "false"
     },
     "terminal.integrated.profiles.linux": {
         "bash": {
             "path": "bash",
-            "args": ["--rcfile", "~/.vscode_bashrc"],
+            "args": ["--rcfile","~/coding/config_files/vscode/vscoderc"],
             "icon": "terminal-bash"
-        },
-        "zsh": {
-            "path": "zsh"
-        },
-        "fish": {
-            "path": "fish"
-        },
-        "tmux": {
-            "path": "tmux",
-            "icon": "terminal-tmux"
-        },
-        "pwsh": {
-            "path": "pwsh",
-            "icon": "terminal-powershell"
         }
     },
-    "latex-workshop.latex.tools": [
-        {
-            "name": "latexmk",
-            "command": "latexmk",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "-pdf",
-                "-outdir=%OUTDIR%",
-                "%DOC%"
-            ],
-            "env": {}
-        },
-        {
-            "name": "xelatex",
-            "command": "xelatex",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "%DOC%"
-            ],
-            "env": {}
-        },
-        {
-            "name": "pdflatex",
-            "command": "pdflatex",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "%DOC%"
-            ],
-            "env": {}
-        },
-        {
-            "name": "bibtex",
-            "command": "bibtex",
-            "args": [
-                "%DOCFILE%"
-            ],
-            "env": {}
-        }
+    "terminal.integrated.enablePersistentSessions": false,
+    "terminal.integrated.fontFamily": "'FiraCode Nerd Font Mono'",
+    "terminal.integrated.suggest.enabled": false,
+    "terminal.integrated.shellIntegration.enabled": false,
+    "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+
+
+
+    // -----------------------------------------
+    //              IDE settings
+    // -----------------------------------------
+    "settingsSync.ignoredSettings": [
+        "workbench.colorTheme"
     ],
-    "latex-workshop.latex.recipes": [
-        {
-            "name": "pdfLaTeX",
-            "tools": [
-                "pdflatex"
-            ]
-        },
-        {
-            "name": "latexmk 🔃",
-            "tools": [
-                "latexmk"
-            ]
-        },
-        {
-            "name": "xelatex",
-            "tools": [
-                "xelatex"
-            ]
-        },
-        {
-            "name": "pdflatex ➞ bibtex ➞ pdflatex`×2",
-            "tools": [
-                "pdflatex",
-                "bibtex",
-                "pdflatex",
-                "pdflatex"
-            ]
-        },
-        {
-            "name": "xelatex ➞ bibtex ➞ xelatex`×2",
-            "tools": [
-                "xelatex",
-                "bibtex",
-                "xelatex",
-                "xelatex"
-            ]
-        }
-    ],
-    "latex-workshop.latex.autoClean.run": "onSucceeded",
-    "latex-workshop.latex.clean.args": [
-        "-outdir=%TEX%/auxiliary",
-        "-c",
-        "%TEX%"
-    ],
+    "extensions.ignoreRecommendations": true,
     "editor.wordWrap": "on",
-    "git.confirmSync": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmPasteNative": false,
+    "editor.minimap.enabled": false,
+    "workbench.sideBar.location": "right",
+    "chat.viewSessions.orientation": "stacked",
+    
+
+
+    // -----------------------------------------
+    //              Copilot Shit
+    // -----------------------------------------
     "github.copilot.enable": {
         "*": false,
-        "plaintext": false,
-        "markdown": false,
-        "scminput": false,
-        "python": false,
-        "latex": false,
-        "cpp": false,
-        "shellscript": false
     },
+    "github.copilot.nextEditSuggestions.enabled": true,
     "[cpp]": {
         "editor.wordBasedSuggestions": "off",
         "editor.semanticHighlighting.enabled": true,
         "editor.stickyScroll.defaultModel": "foldingProviderModel",
         "editor.suggest.insertMode": "replace"
     },
-    "github.copilot.nextEditSuggestions.enabled": true,
-    "explorer.confirmDelete": false,
+    
+
+
+    // -----------------------------------------
+    //              Security
+    // -----------------------------------------
     "security.workspace.trust.untrustedFiles": "open",
-    "terminal.integrated.fontFamily": "'FiraCode Nerd Font Mono'",
-    "files.associations": {
-        "*.py": "python"
-    },
-    "jupyter.askForKernelRestart": false,
+    
+    
+
+    // -----------------------------------------
+    //              Git
+    // -----------------------------------------
     "git.autofetch": true,
-    "chat.mcp.gallery.enabled": true,
-    "workbench.commandPalette.experimental.enableNaturalLanguageSearch": false,
-    "github.copilot.chat.useResponsesApi": false,
-    "extensions.ignoreRecommendations": true,
-    "terminal.integrated.suggest.enabled": false,
-    "explorer.confirmDragAndDrop": false,
-    "editor.minimap.enabled": false,
-    "[python]": {
-        "diffEditor.ignoreTrimWhitespace": true
-    },
-    "latex-workshop.view.pdf.color.light.backgroundColor": "",
-    "latex-workshop.view.pdf.invert": 1,
+    "git.confirmSync": false,
+    "git.mergeEditor": true,
+    "git.openRepositoryInParentFolders": "never",
+    
+    
+    
+    // -----------------------------------------
+    //              Python
+    // -----------------------------------------
     "python.createEnvironment.trigger": "off",
     "python.analysis.typeCheckingMode": "basic",
-    "git.openRepositoryInParentFolders": "never",
-    "terminal.integrated.shellIntegration.enabled": false,
-    "terminal.integrated.shellIntegration.decorationsEnabled": "never",
-    "workbench.sideBar.location": "right",
-    "chat.viewSessions.orientation": "stacked",
-    "explorer.confirmPasteNative": false,
-    "python.analysis.diagnosticSeverityOverrides": {},
-    "python.analysis.autoIndent": false,
+    "python.analysis.autoIndent": true,
     "python.analysis.displayEnglishDiagnostics": true,
-    // "workbench.colorTheme": "Quiet Light", 
-    // "workbench.colorCustomizations": {
+    "jupyter.askForKernelRestart": false,
+
+
+
+    // -----------------------------------------
+    //              Aesthetics
+    // -----------------------------------------
+    "workbench.colorTheme": "Ayu Dark Bordered",
+    "workbench.colorCustomizations": {
+        "[Ayu Dark Bordered]": {
+            "sideBar.foreground": "#7b8396",
+            "sideBarTitle.foreground": "#7b8396",
+            "sideBarSectionHeader.foreground": "#646d83"
+        },
+        "[Quiet Light]": {
+            "editor.background":"#f5eef3",
+            "sideBar.background":"#f5eef3",
+            "editorGroupHeader.tabsBackground":"#f3f3f3",
+        }
+    },
+    // "editor.tokenColorCustomizations": {
     //     "[Quiet Light]": {
-    //         "editor.background":"#f5eef3",
-    //         "sideBar.background":"#f5eef3",
-    //         "editorGroupHeader.tabsBackground":"#f3f3f3",
+    //     "comments": ""
     //     }
     // },
-    "settingsSync.ignoredSettings": [
-        "workbench.colorTheme",
-        "workbench.colorCustomizations"
-    ],
-    "workbench.colorTheme": "Ayu Dark Bordered",
+    
 }
