@@ -14,7 +14,7 @@ if [ ! -f $FILE ];then
 fi
 
 BRIGHTNESS=$(cat $FILE)
-if [ "$(echo "$BRIGHTNESS < 1" | bc -l)" -eq 1 ]; then
+if [ "$(echo "$BRIGHTNESS < 1" | bc -l)" -eq 1 ]; thenz
     BRIGHTNESS=$(echo "scale=2; $BRIGHTNESS-0.05 "| bc -l)
     echo $BRIGHTNESS > $FILE
     xrandr --output DP-2 --brightness $BRIGHTNESS

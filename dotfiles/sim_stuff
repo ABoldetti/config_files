@@ -1,0 +1,5 @@
+export GARFIELD_HOME=/home/nobolde/.build/garfield
+
+source /home/nobolde/.build/root/bin/thisroot.sh
+source /home/nobolde/.build/geant/install/bin/geant4.sh
+source $GARFIELD_HOME/install/share/Garfield/setupGarfield.sh
