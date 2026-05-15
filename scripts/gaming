@@ -4,5 +4,5 @@ kscreen-doctor output.DP-2.disable
 kscreen-doctor output.HDMI-A-1.enable
 
 pactl set-default-sink alsa_output.pci-0000_03_00.1.hdmi-stereo-extra2
-
+sleep 20
 steam steam://open/bigpicture
