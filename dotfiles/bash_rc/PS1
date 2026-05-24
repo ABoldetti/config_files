@@ -1,0 +1,8 @@
+# Bold text
+BOLD="\[\e[1m\]"
+RESET="\[\e[0m\]"
+
+# Custom PS1 with date and time
+PS1="${BOLD}[\u \D{%Y-%m-%d %H:%M}]${RESET} \w \$ "
+
+export PS1
