@@ -2,3 +2,7 @@ export SCRIPT=$HOME/coding/config_files/scripts
 alias gaming="$SCRIPT/gaming" 
 
 
+ss(){
+$SCRIPT/screen_switcher $1
+}
+

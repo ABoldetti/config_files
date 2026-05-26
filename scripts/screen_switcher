@@ -1,0 +1,47 @@
+#! /bin/bash
+
+TV=HDMI-A-1
+MONITOR=DP-2
+
+
+disable(){
+    if xrandr --query | grep $1; then
+	    # DP-2 is connected/enabled — disable it
+        echo "----------------$1---------------"
+	    kscreen-doctor output.$1.disable
+    fi
+}
+
+enable(){
+    if ! xrandr --query | grep -q $1; then
+	    # DP-2 is connected/enabled — disable it
+        echo "----------------$1---------------"
+	    kscreen-doctor output.$1.enable
+    fi
+}
+
+if [ "$#" -lt 1 ]; then
+    echo "add a number:"
+    echo "1: only monitor"
+    echo "2: TV + monitor"
+    echo "3: only TV"
+    exit
+fi
+
+# ensure an argument was provided and compare safely
+if [ "$#" -ge 1 ]; then
+    if [ "$1" -eq 1 ]; then
+        enable "$MONITOR"
+        sleep 1
+        disable "$TV"
+    elif [ "$1" -eq 2 ]; then
+        enable "$MONITOR"
+        sleep 1
+        enable "$TV"
+        kscreen-doctor output.$MONITOR.position.350,1440
+    elif [ "$1" -eq 3 ]; then
+        enable "$TV"
+        sleep 1
+        disable "$MONITOR"
+    fi
+fi

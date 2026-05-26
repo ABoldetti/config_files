@@ -1,8 +1,15 @@
 #! /bin/bash
 
-kscreen-doctor output.DP-2.disable
-kscreen-doctor output.HDMI-A-1.enable
+if xrandr --query | grep -q "^DP-2 connected"; then
+	# DP-2 is connected/enabled — disable it
+	kscreen-doctor output.DP-2.disable
+fi
 
+if xrandr --query | grep -q "^HDMI-A-1 disconnected"; then
+	# DP-2 is connected/enabled — disable it
+	kscreen-doctor output.HDMI-A-1.enable
+fi
+
+sleep 3
 pactl set-default-sink alsa_output.pci-0000_03_00.1.hdmi-stereo-extra2
-sleep 5
 steam steam://open/bigpicture
