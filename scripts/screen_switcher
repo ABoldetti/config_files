@@ -19,7 +19,7 @@ enable(){
 	    kscreen-doctor output.$1.enable
     fi
 }
-
+#check if a number is given
 if [ "$#" -lt 1 ]; then
     echo "add a number:"
     echo "1: only monitor"
@@ -28,7 +28,7 @@ if [ "$#" -lt 1 ]; then
     exit
 fi
 
-# ensure an argument was provided and compare safely
+#actual function
 if [ "$#" -ge 1 ]; then
     if [ "$1" -eq 1 ]; then
         enable "$MONITOR"

@@ -6,3 +6,6 @@ RESET="\[\e[0m\]"
 PS1="${BOLD}[\u \D{%Y-%m-%d %H:%M}]${RESET} \w \$ "
 
 export PS1
+
+
+export LOCAL_NOTEBOOK_DEV=1
