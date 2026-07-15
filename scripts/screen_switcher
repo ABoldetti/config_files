@@ -38,6 +38,7 @@ if [ "$#" -ge 1 ]; then
         enable "$MONITOR"
         sleep 1
         enable "$TV"
+	kscreen-doctor output.$MONITOR.primary
         kscreen-doctor output.$MONITOR.position.350,1440
     elif [ "$1" -eq 3 ]; then
         enable "$TV"
