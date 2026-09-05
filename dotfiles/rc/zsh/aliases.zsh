@@ -3,3 +3,4 @@ alias ll="ls -l -h --color=always"
 alias activate="source ~/coding/.venvs/pyvenv/bin/activate"
 alias sleep="systemctl suspend"
 alias sd="shutdown -h now"
+eval $(thefuck --alias)
