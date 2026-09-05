@@ -4,17 +4,17 @@ TV=HDMI-A-1
 MONITOR=DP-2
 
 
-disable(){
+disable(){ # $1 = display address
     if xrandr --query | grep $1; then
-	    # DP-2 is connected/enabled — disable it
+	    # device is connected/enabled — disable it
         echo "----------------$1---------------"
 	    kscreen-doctor output.$1.disable
     fi
 }
 
-enable(){
+enable(){ # $1 = display address
     if ! xrandr --query | grep -q $1; then
-	    # DP-2 is connected/enabled — disable it
+	    # device is disabled - enable it
         echo "----------------$1---------------"
 	    kscreen-doctor output.$1.enable
     fi
