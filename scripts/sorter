@@ -1,0 +1,18 @@
+#! /bin/bash
+
+DOW_DIR="$HOME/dow"
+ANIME_DIR="$DOW_DIR/anime"
+THRESHOLD=1000000
+
+mkdir -p "$ANIME_DIR"
+
+SIZE=$(du -s "$ANIME_DIR" --apparent-size 2>/dev/null | awk '{print $1}')
+
+if [ "$SIZE" -ge "$THRESHOLD" ]; then
+    echo "deleting files..."
+    rm -f "$ANIME_DIR"/*.mp4
+fi
+
+if ls "$DOW_DIR"/*.mp4 >/dev/null 2>&1; then
+    mv "$DOW_DIR"/*.mp4 "$ANIME_DIR"/
+fi
