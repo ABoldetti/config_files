@@ -5,6 +5,9 @@ export XDG_CONFIG_HOME=$HOME/.config
 alias gaming="$SCRIPT/gaming" 
 unsetopt BEEP
 
+bindkey '»' autosuggest-accept
+
+
 ss(){
 $SCRIPT/screen_switcher $1
 }
